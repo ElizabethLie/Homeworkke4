@@ -2,16 +2,23 @@ import './App.css';
 import data from "./Data1";
 import Song from "./components/Song";
 
+console.log(data);
 function App() {
   return (
     <div className="App">
-      <Song
-        title={data.name}
-        image={data.album.images[0].url}
-        album={data.album.name}
-        artists={data.artists[0].name}
-        url={data.album.artists[0].external_urls.spotify}
-      />
+      {data.map((song) => {
+        const { id, name, artists, album } = song;
+        return (
+          <Song
+            key={id}
+            title={name}
+            image={album.images[0]?.url}
+            album={album.name}
+            artists={artists[0]?.name}
+            url={album.artists[0]?.external_urls.spotify}
+          />
+        );
+      })}
     </div>
   );
 }
