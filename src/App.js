@@ -2,13 +2,14 @@ import './App.css';
 import Song from "./components/Song";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import url from "./spotifydetail/dataspotify";
+import url from "./spotifydetail/spotify";
 
 
 function App() {
   const [token, setToken] = useState("");
   const [searchSong, setSearchSong] = useState("");
   const [data, setdata] = useState([]);
+
 
   useEffect(() => {
     const queryString = new URL(window.location.href.replace("#", "?"))
@@ -31,6 +32,23 @@ function App() {
   };
 
   return (
+    <div class="PCreate">
+      <h1 class="title">Create Playlist</h1>
+      <form action="#" id="form">
+        <label for="title">Title</label>
+        <br />
+        <input placeholder="Title" type="text" name="title" id="title" />
+        <br /><br />
+        <label for="desctitle">Description</label>
+        <br />
+        <textarea
+          placeholder="Description"
+          name="desctitle"
+          id="desctitle"
+        ></textarea>
+        <br /><br />
+        <input class="Tombol1" type="submit" value="Create Playlist" />
+      </form>
     <div className="PlayMusic">
       <div className="PlayMusicMenu">
         <h2 className="PlayMusicName">
@@ -56,6 +74,7 @@ function App() {
           </div>
         </div>
       </div>
+      </div>
       <div className="App">
       {data.map((song) => {
         const { id, name, artists, album } = song;
@@ -72,6 +91,7 @@ function App() {
         })}
       </div>
     </div>
+
   );
 }
 
