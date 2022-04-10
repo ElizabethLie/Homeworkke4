@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPlaylist, pushSongs } from "../../axios/axios.service";
 
-const Form = ({ token, userId, songUris }) => {
+const Form = ({ userId, songUris }) => {
   const [playlistId, setPlaylistId] = useState("");
   const [form, setForm] = useState({
     title: "",
@@ -9,11 +9,19 @@ const Form = ({ token, userId, songUris }) => {
   });
 
 
+  // useEffect(() => {
+  //   if (playlistId) {
+  //     addSongs();
+  //   }
+  // }, [playlistId]);
+
+
   useEffect(() => {
     if (playlistId) {
       addSongs();
     }
   }, [playlistId]);
+
 
 
   const handleForm = (e) => {
@@ -83,9 +91,9 @@ const Form = ({ token, userId, songUris }) => {
             <button
               id="submit"
               type="submit"
-              className="btn-create"
+              className="btn-3"
             >
-              Create
+              Create Playlist
             </button>
           </div>
         </div>
