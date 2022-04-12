@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import CreatePlaylist from "../CreatePlaylist";
 import Login from "../Login";
-
+import Search from "../../components/Search";
 function Home() {
   const token = useSelector((state) => state.token.value);
   return (
@@ -21,10 +21,12 @@ function Home() {
             <CreatePlaylist />
           </Route>
           <Route path="*">
-            <h3>404</h3>
+            <h3>Error 404 Not Found</h3>
+            <h5>(halaman atau website yang kalian tuju tidak dapat ditemukan)</h5>
           </Route>
         </Switch>
       </Router>
+      <Search/>
     </div>
   );
 }

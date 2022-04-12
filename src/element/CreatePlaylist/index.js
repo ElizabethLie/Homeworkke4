@@ -58,9 +58,7 @@ const CreatePlaylist = () => {
       <div className="PCreate">
       <h1 class="title">Create Playlist</h1>
       </div>
-      <Search getSong={getSong} setSearchSong={setSearchSong} />
       <Form token={token} userId={userId} songUris={selectedSongs} />
-      
       <div className="App">
         {combineSongs.map((song) => {
           const { uri, name, artists, album, isSelected } = song;
