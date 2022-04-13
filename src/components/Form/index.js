@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createPlaylist, pushSongs } from "../../axios/axios.service";
+import Button from '@mui/material/Button';
 
 const Form = ({ userId, songUris }) => {
   const [playlistId, setPlaylistId] = useState("");
@@ -7,14 +8,6 @@ const Form = ({ userId, songUris }) => {
     title: "",
     description: "",
   });
-
-
-  // useEffect(() => {
-  //   if (playlistId) {
-  //     addSongs();
-  //   }
-  // }, [playlistId]);
-
 
   useEffect(() => {
     if (playlistId) {
@@ -68,7 +61,7 @@ const Form = ({ userId, songUris }) => {
             <input
               type="text"
               className="judul3"
-              placeholder="Title"
+              placeholder="Input Title"
               name="title"
               value={form.title}
               onChange={handleForm}
@@ -81,20 +74,16 @@ const Form = ({ userId, songUris }) => {
             <input
               type="text"
               className="keterangan3"
-              placeholder="Description"
+              placeholder="Input Description"
               name="description"
-              value={form.des}
+              value={form.description}
               onChange={handleForm}
             />
           </div>
           <div>
-            <button
-              id="submit"
-              type="submit"
-              className="btn-3"
-            >
-              Create Playlist
-            </button>
+            <div className="btn-3">
+              <Button type="submit" variant="contained" color="success" >Create Playlist</Button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Song from "../../components/Song";
-import Search from "../../components/Search";
 import { retrieveSongs, retrieveUserId } from "../../axios/axios.service";
 import Form from "../../components/Form";
 import '../../App.css';
