@@ -1,10 +1,11 @@
-const playlistdetail = ({ image, title, album, artist, selectState, isSelected, uri}) => {
+import { songInterface } from "extype/extypes";
+const playlistdetail = ({ image, title, album, artists, selectState, isSelected, uri}: songInterface) => {
   return (
     <div className="App">
         <img className="img-1" src={image} alt="Album"/>
         <h3>{title}</h3>
         <h4>{album}</h4>
-        <p>{artist}</p>
+        <p>{artists}</p>
         <button className="btn-1" onClick={() => {selectState(uri);}}>{isSelected ? "Deselect" : "Select"}</button>
     </div>
   );
