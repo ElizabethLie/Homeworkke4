@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Song from "../../components/Song";
-import { retrieveSongs, retrieveUserId } from "../../axios/axios.service";
+import { retrieveUserId } from "../../axios/axios.service";
 import Form from "../../components/Form";
 import '../../App.css';
 const CreatePlaylist = () => {
   const token = useSelector((state) => state.token.value);
-
   const [userId, setUserId] = useState("");
-  const [searchSong, setSearchSong] = useState("");
-  const [songData, setSongData] = useState([]);
+  const [songData] = useState([]);
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [combineSongs, setCombineSongs] = useState([]);
-
 
   useEffect(() => {
     getUserId();
@@ -25,16 +22,6 @@ const CreatePlaylist = () => {
     }));
     setCombineSongs(handleCombineTracks);
   }, [songData, selectedSongs]);
-
-  const getSong = () => {
-    retrieveSongs(searchSong)
-      .then((response) => {
-        setSongData(response.data.tracks.items);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
   const getUserId = () => {
     retrieveUserId()
@@ -55,7 +42,7 @@ const CreatePlaylist = () => {
   return (
     <div>
       <div className="PCreate">
-      <h1 class="title">Create Playlist</h1>
+      <h1 className="title">Create Playlist</h1>
       </div>
       <Form token={token} userId={userId} songUris={selectedSongs} />
       <div className="App">
@@ -82,4 +69,3 @@ const CreatePlaylist = () => {
 };
 
 export default CreatePlaylist;
-

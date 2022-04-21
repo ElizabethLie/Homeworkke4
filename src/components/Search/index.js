@@ -1,20 +1,17 @@
 import './../../App.css';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setToken } from './../../modulredux/tokenSlice';
 import Song from "./../../components/Song";
-import React from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 function Search() {
-  //const [token, setToken] = useState("");
   const [searchSong, setSearchSong] = useState("");
   const [data, setdata] = useState([]);
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [combineSongs, setCombineSongs] = useState([]);
-  const token = useSelector((state) => state.token);
   const dispatch = useDispatch();
   const [accToken, setAccToken] = useState('');
 
@@ -77,8 +74,8 @@ function Search() {
   };
 
   return (
-    <div class="Pencarian">
-          <div class="SearchMenu">
+    <div className="Pencarian">
+          <div className="SearchMenu">
             <TextField id="outlined-basic" color="success" focused  placeholder="Artists or Songs" label="Input" variant="filled" onChange={(e) => setSearchSong(e.target.value)} /> 
             <Button variant="contained" color="success" onClick={getSong}>Search</Button>
             </div>  
@@ -106,5 +103,4 @@ function Search() {
   );
 }
 
-//export
 export default Search;

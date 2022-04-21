@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 const Login = () => {
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     dispatch(setToken(getToken()));
   }, [dispatch]);
@@ -20,8 +20,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <Button className="login" variant="contained" color="success" href={url}>Login</Button>
+    <div className="SearchMenu">
+      <Button variant="contained" color="success" href={url}>Login</Button>
     </div>
   );
 };

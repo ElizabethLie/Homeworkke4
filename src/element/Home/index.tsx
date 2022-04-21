@@ -8,6 +8,7 @@ import {
 import CreatePlaylist from "../CreatePlaylist";
 import Login from "../Login";
 import Search from "../../components/Search";
+
 function Home() {
   const token = useSelector((state: any) => state.token.value);
   return (
@@ -30,4 +31,4 @@ function Home() {
     </div>
   );
 }
- export default Home;
+export default Home;

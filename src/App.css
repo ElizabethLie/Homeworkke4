@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #525050;
+  background-color: black;
   color: aliceblue;
   font-family: Fira Sans;
   border-radius: 10px;
@@ -8,8 +8,18 @@
 .SearchMenu{
   margin-top: 15px;
   text-align: center;
+  color:rgb(255, 255, 255);
+}
+.SearchMenu input{
+  color:white;
 }
 .SearchMenu button{
+  margin-top: 8px;
+  margin-left: 10px;
+  border-radius: 50px;
+  font-family: Anton;
+}
+.loginbutton{
   margin-top: 8px;
   margin-left: 10px;
 }
@@ -25,14 +35,14 @@
 
 .Card-1{
   display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 180px;
+  margin-right: 180px;
   margin-top: 10px;
   margin-bottom: 10px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto;
   gap: 5px;
-  background-color: #057947;
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   border-radius: 10px;
   font-size: 12px;
@@ -83,10 +93,11 @@
 .btn-1 {
   width: 100px;
   height: 35px;
-  border-radius: 50px;
-  margin-top: -100px;
+  border-radius: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
   margin-left: 3px;
+  border-radius: 50px;
   border: 1px solid #aebec3;
   font-family: Anton;
   cursor: pointer;
@@ -118,7 +129,6 @@
   margin-top: 3px;
   background-color: white;
   padding: 4px;
-  border-radius: 5px;
   border: 2px solid #526165;
 }
 .title {
@@ -127,44 +137,7 @@
   margin-left: 3px;
   color: white;
 }
-.Tombol1 {
-  width: 100px;
-  height: 35px;
-  border-radius: 50px;
-  margin-top: -100px;
-  margin-bottom: 10px;
-  margin-left: 3px;
-  color: white;
-  border: 1px solid #aebec3;
-  font-family: Anton;
-  cursor: pointer;
-  background-color: #00cb73;
-  transition: 0.1s;
-  box-shadow: inset 3px 3px 4px #f1e9ed, inset -2px -3px 4px #f1e9ed;
-}
-.Tombol1:hover {
-  background-color: #037e48;
-  color: #f1e9ed;
-}
-.btn-2{
-  width: 60px;
-  height: 30px;
-  border-radius: 50px;
-  margin-top: -100px;
-  margin-bottom: 10px;
-  margin-left: 3px;
-  color: white;
-  border: 1px solid #aebec3;
-  font-family: Anton;
-  cursor: pointer;
-  background-color: #00cb73;
-  transition: 0.1s;
-  box-shadow: inset 3px 3px 4px #f1e9ed, inset -2px -3px 4px #f1e9ed;
-}
-.btn-2:hover {
-  background-color: #037e48;
-  color: #f1e9ed;
-}
+
 .SearchValue{
   margin-top: 3px;
   background-color: white;
@@ -190,4 +163,6 @@
 .btn-3 button{
   margin-left: 90px;
   font-size: 10px;
+  border-radius: 50px;
+  font-family: Anton;
 }

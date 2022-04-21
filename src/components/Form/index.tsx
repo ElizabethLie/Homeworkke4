@@ -64,9 +64,7 @@ const Form = ({ songUris }:songUrisInterface) => {
 return (
   <form onSubmit={handleSubmit}>
     <div className="judul">
-      <div className="judul">
-        <div className="judul">
-          <label htmlFor="title" className="judul">
+          <label htmlFor="title">
             Title
           </label>
           <input
@@ -95,8 +93,6 @@ return (
           <div className="btn-3">
             <Button type="submit" variant="contained" color="success" >Create Playlist</Button>
           </div>
-        </div>
-      </div>
     </div>
   </form>
   );

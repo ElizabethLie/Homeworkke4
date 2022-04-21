@@ -6,7 +6,7 @@ const playlistdetail = ({ image, title, album, artists, selectState, isSelected,
         <h3>{title}</h3>
         <h4>{album}</h4>
         <p>{artists}</p>
-        <button className="btn-1" onClick={() => {selectState(uri);}}>{isSelected ? "Deselect" : "Select"}</button>
+        <button className="btn-1" onClick={() => {selectState(uri);}}>{isSelected ? "DESELECT" : "SELECT"}</button>
     </div>
   );
 };
