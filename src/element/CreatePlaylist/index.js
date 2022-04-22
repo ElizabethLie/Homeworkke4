@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Song from "../../components/Song";
 import { retrieveUserId } from "../../axios/axios.service";
 import Form from "../../components/Form";
+import Navbar from "../../components/Navbar";
 import '../../App.css';
 const CreatePlaylist = () => {
   const token = useSelector((state) => state.token.value);
@@ -11,6 +12,7 @@ const CreatePlaylist = () => {
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [combineSongs, setCombineSongs] = useState([]);
 
+  
   useEffect(() => {
     getUserId();
   }, []);
@@ -33,6 +35,7 @@ const CreatePlaylist = () => {
       });
   };
 
+
   const handleSelect = (uri) => {
     const selected = selectedSongs.find((song) => song === uri);
     selected
@@ -41,6 +44,7 @@ const CreatePlaylist = () => {
   };
   return (
     <div>
+      <Navbar />
       <div className="PCreate">
       <h1 className="title">Create Playlist</h1>
       </div>

@@ -20,6 +20,11 @@ This Final Project Using:
 * Material UI
 * Vercel
 
+## Other Features (Bonus)
+
+* ✨ Log Out
+* ✨ User Picture
+
 ## Environment Variables
 
 This project need environment variables in .env file
