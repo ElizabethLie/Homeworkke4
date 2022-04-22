@@ -2,6 +2,11 @@
 
 This Final Project For [#GenerasiGigih](https://sites.google.com/anakbangsabisa.org/generasigigih-landingpage/home?authuser=1) With React JS implementation
 
+## Description
+In This Final Project I use React JS and Vercel Hosting.
+This Project is a playlist application with sportify implementation. 
+the steps to using this app first the user log in using a sportify account so that they can access create playlists and playslists but if they don't log in first then the user cannot access and also if the user accesses the wrong link the app will notify that the page cannot be found.
+
 ## Features
 
 This Final Project Using:
@@ -15,9 +20,10 @@ This Final Project Using:
 * Material UI
 * Vercel
 
-### Environment Variables
+## Environment Variables
 
 This project need environment variables in .env file
+
 `REACT_APP_SPOTIFY_CLIENT_ID`
 
 `REACT_APP_SPOTIFY_CLIENT_SECRET`
@@ -27,19 +33,31 @@ This project need environment variables in .env file
 `REACT_APP_REDIRECT_URI`
 
 
-### Run Server via Local
+## Run Server via Local
 
 Clone The Project
-`git clone https://github.com/ElizabethLie/Homeworkke4`
+
+```bash
+git clone https://github.com/ElizabethLie/Homeworkke4
+```
 
 Project Directory
-`cd D:\@GOJEK\homework4`
+
+```bash
+cd D:\@GOJEK\homework4
+```
 
 Install Dependencies
-`npm install`
+
+```bash
+npm install
+```
 
 Start The Server
-`npm start`
+
+```bash
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser to see the results.
